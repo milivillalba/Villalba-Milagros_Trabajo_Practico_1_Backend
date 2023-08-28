@@ -17,7 +17,7 @@ sequelize.models = {
   Post,
   Comment,
 };
-
+//
 sequelize.sync({ force: false }).then(() => {
   console.log("Tablas de Usuario, Post, Comentarios creadas");
   app.listen(port, () => {
