@@ -28,8 +28,6 @@ const Comment = sequelize.define('Comment',
 
 module.exports= Comment;
 
-// Relación muchos a uno con Post (donde se realizó el comentario)
-// Comment.belongsTo(Post);
 
 
 

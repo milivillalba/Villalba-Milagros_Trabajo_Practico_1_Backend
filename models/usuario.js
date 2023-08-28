@@ -1,5 +1,6 @@
 const {DataTypes, sequelize } =require("../db") ;
 // const userCtr = require("../controllers/userController")
+const { checkSchema }= require('express-validator') ;
 
 
 

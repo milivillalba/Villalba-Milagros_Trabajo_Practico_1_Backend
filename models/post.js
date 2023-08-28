@@ -51,12 +51,5 @@ module.exports= Post;
 
 
 
-// Relación uno a muchos con Comentarios
-// Post.hasMany(Comment, { onDelete: 'CASCADE', onUpdate: 'CASCADE' });
-// Comment.belongsTo(Post);
 
-// // Relación muchos a uno con Usuario (Autor del post)
-// Post.belongsTo(User);
-
-// Exportar el modelo
 

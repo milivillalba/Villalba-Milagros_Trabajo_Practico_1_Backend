@@ -46,9 +46,6 @@ app.use((req, res, next) => {
 
 
 
-// ecuche el servidor 
-// app.listen(port, () => {
-//     console.log(`Servidor en ejecución en http://localhost:${port}`);
-//   });
+
 
   module.exports = app
