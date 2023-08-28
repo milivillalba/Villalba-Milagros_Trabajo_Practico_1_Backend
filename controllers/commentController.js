@@ -2,19 +2,25 @@
 const Comment  = require('../models/comentario');
 
   commentCtr.createComment= async (req, res) => {
+    const {  text } = req.body;
     try {
-      const { postId, text } = req.body;
-      const post = await Post.findByPk(postId);
-      if (!post) {
-        return res.status(404).json({ error: 'Post not found' });
-      }
-      const newComment = await Comment.create({
-        text,
-        PostId: postId
-      });
-      res.status(201).json(newComment);
+      
+      const newComment = new Comment({
+          text
+        });
+      //SE ENVIA EL COMENTARIO A LA BASE DE DATOS 
+      await newComment.save();
+
+    //  if (!comentCreado) {
+    //   throw {
+    //     menssage: "error al crear el comentario ",
+    //   };
+    //  }
+    return res.status(201).json({ message: "comentario creado con éxito" });
+   
     } catch (error) {
-      res.status(500).json({ error: 'Error creating comment' });
+      console.log("Error al crear el comentario", error);
+      return res.status(500).json({ message: "Error al crear el comentario" });
     }
   }
 

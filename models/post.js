@@ -16,7 +16,7 @@ const Post = sequelize.define('Post',
     allowNull: false
   },
   content: {
-    type: DataTypes.TEXT(500),
+    type: DataTypes.STRING(500),
     allowNull: false
   },
   fecha_creacion: {

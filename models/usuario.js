@@ -1,5 +1,5 @@
 const {DataTypes, sequelize } =require("../db") ;
-const userCtr = require("../controllers/userController")
+// const userCtr = require("../controllers/userController")
 
 
 

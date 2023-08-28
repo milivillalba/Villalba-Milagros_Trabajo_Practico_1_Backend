@@ -12,7 +12,7 @@ const Comment = sequelize.define('Comment',
     allowNull: false
   },
   text: {
-    type: DataTypes.TEXT(500),
+    type: DataTypes.STRING(500),
     allowNull: false
   },
   fecha_creacion: {

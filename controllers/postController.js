@@ -1,33 +1,38 @@
 const PostrCtr = {};
 const Post = require('../models/post');
+const bcrypt = require("bcrypt");
 
 
   PostrCtr.createPost = async (req, res) => {
-    const { id, title, content , fecha_creacion } = req.body;
+    const {  title, content  } = req.body;
     try {
-        const existePost = await Post.findOne({
-            where: {
-              email,
-            },
-        });
-        if(existePost){
-            throw {
-                status: 400,
-                message: "El POST ya existe",
-            };
-        }
+        // const existePost = await Post.findOne({
+        //     where: {
+        //       email,
+        //     },
+        // });
+        // if(existePost){
+        //     throw {
+        //         status: 400,
+        //         message: "El POST ya existe",
+        //     };
+        // }
 
       const newPost = new Post({
         title,
         content,
-        fecha_creacion,
-        UserId: userId
+        
       });
-      //encriptar contraseña
-    const salt = await bcrypt.genSalt(10);
-    newPost.password = await bcrypt.hash(password, salt);
-
+     
     //guardar usuario en la base de datos
+
+    const postCreado = await newPost.save();
+
+    if (!postCreado) {
+      throw {
+        menssage: "error al crear el post ",
+      };
+    }
     return res.status(201).json({
         message: "POST creado exitosamente",
     });
