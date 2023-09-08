@@ -1,0 +1,4 @@
+::ffff:127.0.0.1 - - [08/Sep/2023:13:18:35 +0000] "GET /posts/3 HTTP/1.1" 200 188 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [08/Sep/2023:13:19:33 +0000] "GET /posts/3 HTTP/1.1" 200 188 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [08/Sep/2023:13:19:47 +0000] "GET /posts/2 HTTP/1.1" 200 280 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [08/Sep/2023:13:19:54 +0000] "GET /posts/1 HTTP/1.1" 200 226 "-" "Thunder Client (https://www.thunderclient.com)"

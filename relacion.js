@@ -2,8 +2,8 @@ const { DataTypes, sequelize } = require("./db.js");
 const User = require("./models/usuario.js");
 const Post = require("./models/post.js");
 const Comment = require("./models/comentario.js");
-const app = require("./app.js")
-require("dotenv").config()
+const app = require("./app.js");
+require("dotenv").config();
 const port = process.env.PORT;
 
 User.hasMany(Post, { foreignKey: "userId", as: "posts" });
